@@ -1,78 +1,178 @@
-# Kalpana Patil — Portfolio (simplified)
+# 🌐 Kalpana Patil Portfolio
 
-A premium, animated, fully responsive personal portfolio for a Java Full Stack Developer.
-Built with React (Vite) + Tailwind CSS v4 + Framer Motion.
+A modern, premium, and fully responsive **Java Full Stack Developer Portfolio** built with **React (Vite)**, **Tailwind CSS v4**, and **Framer Motion**. It showcases my skills, projects, experience, certifications, and provides an interactive way to connect with me.
 
-## Sections
+## 🚀 Live Demo
 
-Home · About (includes Education) · Projects · Experience · Certifications · Contact
+👉 https://your-portfolio-url.vercel.app
 
-## Other features
+---
 
-- Sticky blurred navbar with active-section highlighting + mobile menu
-- Dark/light theme toggle
-- Resume download button
-- Loading screen, scroll progress bar, back-to-top button, custom cursor
-- Framer Motion scroll-reveal animations throughout
-- Validated contact form wired to EmailJS with toast notifications
-- Custom 404 page
-- Per-section error boundaries (one section failing never blanks the rest of the page)
+## ✨ Features
 
-## Getting started
+- 🎨 Modern and responsive UI
+- 🌙 Dark / Light theme
+- ✨ Smooth animations using Framer Motion
+- 📱 Mobile-friendly design
+- 📌 Sticky navigation with active section highlighting
+- 📄 Resume download
+- 📊 Scroll progress indicator
+- ⬆️ Back-to-top button
+- 🖱️ Custom cursor
+- 📬 Contact form with EmailJS integration
+- 🔔 Toast notifications
+- ⚠️ Custom 404 page
+- 🛡️ Error boundaries for better reliability
+
+---
+
+## 📂 Sections
+
+- 🏠 Home
+- 👩 About
+- 💻 Skills
+- 🚀 Projects
+- 💼 Experience
+- 🎓 Education
+- 📜 Certifications
+- 📞 Contact
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+- React
+- Vite
+- Tailwind CSS v4
+- JavaScript
+- HTML5
+- CSS3
+
+### Libraries
+
+- React Router DOM
+- Framer Motion
+- Lucide React
+- React Type Animation
+- EmailJS
+- React Helmet Async
+- React Toastify
+- React CountUp
+- React Intersection Observer
+- Swiper
+
+---
+
+## 📦 Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/kalpana-portfolio.git
+```
+
+Move into the project
+
+```bash
+cd kalpana-portfolio
+```
+
+Install dependencies
 
 ```bash
 npm install
-npm run dev       # http://localhost:5173
-npm run build     # production build -> dist/
-npm run preview   # preview the production build
-npx vitest run    # render/regression tests
 ```
 
-## Configure before deploying
+Start development server
 
-1. **Content** lives in `src/data/`:
-   - `nav.js` — name, title, intro, contact info, social links, resume path
-   - `projects.js` — project grid
-   - `profile-data.js` — experience, education, certifications
+```bash
+npm run dev
+```
 
-2. **Resume** — drop your PDF at `public/resume/Kalpana_Patil_Resume.pdf`.
+Create production build
 
-3. **EmailJS** — open `src/services/emailjs.js` and replace `SERVICE_ID`, `TEMPLATE_ID`,
-   `PUBLIC_KEY` with your emailjs.com credentials. Template should accept `from_name`,
-   `from_email`, `subject`, `message` variables.
+```bash
+npm run build
+```
 
-4. **Project images** — cards currently show a styled initials placeholder. Add real
-   screenshots to `public/projects/` and reference them via the `image` field in
-   `src/data/projects.js`.
+Preview production build
 
-## Folder structure
+```bash
+npm run preview
+```
+
+---
+
+## ⚙️ Environment Variables
+
+Create a `.env` file in the project root.
+
+```env
+VITE_EMAILJS_SERVICE_ID=your_service_id
+VITE_EMAILJS_CONTACT_TEMPLATE_ID=your_contact_template_id
+VITE_EMAILJS_AUTO_REPLY_TEMPLATE_ID=your_auto_reply_template_id
+VITE_EMAILJS_PUBLIC_KEY=your_public_key
+```
+
+> **Note:** Never commit your `.env` file to GitHub.
+
+---
+
+## 📁 Folder Structure
 
 ```
 src/
-  components/
-    layout/     Navbar, Footer
-    ui/         Button, GlassCard, SectionHeading, Loader, ScrollProgressBar,
-                BackToTop, CustomCursor
-    common/     ErrorBoundary
-  sections/     Hero, About, Projects, Experience, Certifications, Contact
-  pages/        Home, NotFound
-  context/      ThemeContext (dark/light toggle)
-  hooks/        useActiveSection, useScrollProgress
-  data/         nav.js, projects.js, profile-data.js
-  services/     emailjs.js
-  App.jsx / main.jsx / index.css
+│
+├── assets/
+├── components/
+│   ├── common/
+│   ├── layout/
+│   └── ui/
+├── context/
+├── data/
+├── hooks/
+├── pages/
+├── sections/
+├── services/
+├── styles/
+├── utils/
+├── App.jsx
+├── main.jsx
 ```
 
-## Design system
+---
 
-Defined once in `src/index.css` under `@theme`:
+## 📸 Projects Included
 
-| Token | Value |
-|---|---|
-| `--color-primary` | `#3B82F6` |
-| `--color-accent` | `#60A5FA` |
-| `--color-bg` | `#0F172A` |
-| `--color-card` | `#1E293B` |
-| Display font | Sora |
-| Body font | Inter |
-| Mono / label font | JetBrains Mono |
+- AI Expense Tracker
+- Student Management System
+- E-Commerce Application
+- Social Media Platform (Coming Soon)
+
+---
+
+## 📬 Contact
+
+Email
+
+**patilkalpana3657@gmail.com**
+
+LinkedIn
+
+https://linkedin.com/in/YOUR_LINKEDIN
+
+GitHub
+
+https://github.com/YOUR_USERNAME
+
+---
+
+## 📄 License
+
+This project is open source and available under the MIT License.
+
+---
+
+⭐ If you like this project, consider giving it a star on GitHub.
