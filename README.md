@@ -4,7 +4,7 @@ A modern, premium, and fully responsive **Java Full Stack Developer Portfolio** 
 
 ## 🚀 Live Demo
 
-👉 https://your-portfolio-url.vercel.app
+👉 https://kalpana-portfolio-one.vercel.app/
 
 ---
 
@@ -161,11 +161,11 @@ Email
 
 LinkedIn
 
-https://linkedin.com/in/YOUR_LINKEDIN
+www.linkedin.com/in/kalpana-patil-ak2790
 
 GitHub
 
-https://github.com/YOUR_USERNAME
+https://github.com/kalpana23019
 
 ---
 
