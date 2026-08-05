@@ -11,7 +11,6 @@ export default class ErrorBoundary extends Component {
   }
 
   componentDidCatch(error, info) {
-    // Surface the real error in the console instead of failing silently.
     console.error('ErrorBoundary caught an error:', error, info)
   }
 
