@@ -16,6 +16,7 @@ export default function Projects() {
   const getInitials = (title) => {
     if (title.includes('Leave Management')) return 'LMS'
     if (title.includes('E-Commerce')) return 'ECO'
+    if (title.includes('Adaptive Interview')) return 'AAI'
     return title.split(' ').map((w) => w[0]).join('').slice(0, 3).toUpperCase()
   }
 
@@ -24,7 +25,7 @@ export default function Projects() {
       <SectionHeading
         eyebrow="projects"
         title="Featured Projects"
-        description="Production-grade, full-stack and frontend applications built with clean architecture and modern engineering standards."
+        description="Production-grade full-stack, frontend, and generative AI applications built with clean architecture and modern engineering standards."
       />
 
       <div className="flex flex-wrap gap-2 mt-8 mb-10">
@@ -32,11 +33,10 @@ export default function Projects() {
           <button
             key={tech}
             onClick={() => setFilter(tech)}
-            className={`font-mono-alt text-xs px-4 py-2 rounded-full border transition-colors ${
-              filter === tech
-                ? 'bg-[var(--color-primary)] text-white border-[var(--color-primary)]'
-                : 'border-white/10 text-[var(--color-text-dim)] hover:border-[var(--color-primary)]/50 hover:text-[var(--color-primary)]'
-            }`}
+            className={`font-mono-alt text-xs px-4 py-2 rounded-full border transition-colors ${filter === tech
+              ? 'bg-[var(--color-primary)] text-white border-[var(--color-primary)]'
+              : 'border-white/10 text-[var(--color-text-dim)] hover:border-[var(--color-primary)]/50 hover:text-[var(--color-primary)]'
+              }`}
           >
             {tech}
           </button>
@@ -48,7 +48,7 @@ export default function Projects() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.3 }}
-        className="grid md:grid-cols-2 gap-8"
+        className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
       >
         {filtered.map((project, i) => (
           <motion.div

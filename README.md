@@ -50,6 +50,11 @@ A modern, responsive **Java Full Stack Developer | GenAI Portfolio** built with 
    - **Repository:** [student-mahesh/ShopVibe-E-commerce-](https://github.com/student-mahesh/ShopVibe-E-commerce-)
    - Responsive frontend e-commerce web application with product catalogue, search, category filtering, cart management, and localStorage state persistence powered by DummyJSON REST APIs.
 
+3. **AI Adaptive Interview — AI-Powered Job Interview Preparation Platform**
+   - **Stack:** Java 21, Spring Boot, React.js, Python, FastAPI, MySQL, Ollama (Llama 3.2), Docker
+   - **Repository:** [student-mahesh/interviewly-ai-adaptive-interview](https://github.com/student-mahesh/interviewly-ai-adaptive-interview)
+   - Full-stack AI interview preparation platform that analyzes resumes, extracts candidate skills, generates personalized role-specific questions, and delivers adaptive answer evaluation with scoring.
+
 ---
 
 ## 💼 Experience

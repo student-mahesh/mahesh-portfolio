@@ -10,7 +10,6 @@ const CARDS = [
     icon: FolderGit2,
     label: 'Projects',
     value: `${PROJECTS.length}`,
-    note: 'Featured implementations: Leave Management & E-Commerce.',
   },
   {
     icon: Sparkles,
@@ -78,7 +77,7 @@ export default function About() {
               <Icon className="text-[var(--color-primary)] mb-3" size={22} />
               <div className="font-display font-bold text-2xl text-slate-900 dark:text-white">{value}</div>
               <div className="text-sm font-medium mt-0.5 text-slate-700 dark:text-slate-200">{label}</div>
-              <p className="text-xs text-[var(--color-text-dim)] mt-2 leading-relaxed">{note}</p>
+              {note && <p className="text-xs text-[var(--color-text-dim)] mt-2 leading-relaxed">{note}</p>}
             </GlassCard>
           ))}
         </motion.div>

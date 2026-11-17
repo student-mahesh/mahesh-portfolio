@@ -58,6 +58,21 @@ export const PROJECTS = [
       'Implemented Redux Toolkit for centralized state management and created reusable React components for a maintainable application structure.',
     ],
   },
+  {
+    id: 'ai-adaptive-interview',
+    title: 'AI Adaptive Interview — AI-Powered Job Interview Preparation Platform',
+    description:
+      'Full-stack AI interview preparation platform that analyzes resumes, extracts candidate skills, generates personalized questions, and provides adaptive answer evaluation with performance scoring.',
+    tech: ['Java 21', 'Spring Boot', 'React.js', 'Python', 'FastAPI', 'MySQL', 'Ollama', 'Docker'],
+    github: 'https://github.com/student-mahesh/interviewly-ai-adaptive-interview',
+    demo: null,
+    featured: true,
+    highlights: [
+      'Developed an AI-powered interview preparation platform that analyzes uploaded resumes, extracts candidate skills and experience, and generates personalized, job-role-specific interview questions.',
+      'Implemented adaptive interview workflows with AI-based answer evaluation, performance scoring, and detailed interview feedback reports.',
+      'Integrated React.js, Java 21, Spring Boot, Python, FastAPI, MySQL, and Ollama (Llama 3.2) with Docker containerization.',
+    ],
+  },
 ]
 
 export const ALL_TECH_FILTERS = [
