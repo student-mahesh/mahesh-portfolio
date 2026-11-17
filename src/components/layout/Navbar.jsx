@@ -25,7 +25,7 @@ export default function Navbar() {
             onClick={() => scrollTo('home')}
             className="font-display font-bold text-lg gradient-text whitespace-nowrap shrink-0"
           >
-            &lt;KP /&gt;
+            &lt;MS /&gt;
           </button>
 
           <ul className="hidden xl:flex items-center gap-0.5 font-mono-alt text-sm whitespace-nowrap">
@@ -56,7 +56,7 @@ export default function Navbar() {
             </button>
             <a
               href={PROFILE.resumeUrl}
-              download
+              download="Mahesh_Savkar_Resume.pdf"
               className="inline-flex items-center gap-2 text-sm font-medium px-4 py-2 rounded-full border border-[var(--color-primary)]/40 text-[var(--color-primary)] hover:bg-[var(--color-primary)]/10 transition-colors"
             >
               <Download size={15} /> Resume
@@ -103,7 +103,7 @@ export default function Navbar() {
               <li className="px-3 pt-1">
                 <a
                   href={PROFILE.resumeUrl}
-                  download
+                  download="Mahesh_Savkar_Resume.pdf"
                   className="inline-flex items-center gap-2 text-sm font-medium px-4 py-2 rounded-full border border-[var(--color-primary)]/40 text-[var(--color-primary)]"
                 >
                   <Download size={15} /> Resume

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { TypeAnimation } from 'react-type-animation'
-import { ArrowRight, Download, Mail, Code2, Coffee, Database, Braces } from 'lucide-react'
+import { ArrowRight, Download, Mail, Code2, Coffee, Database, Sparkles } from 'lucide-react'
 import Button from '../components/ui/Button'
 import { PROFILE } from '../data/nav'
 
@@ -8,7 +8,7 @@ const FLOATING_ICONS = [
   { Icon: Coffee, top: '10%', left: '8%', delay: 0 },
   { Icon: Code2, top: '65%', left: '4%', delay: 1 },
   { Icon: Database, top: '20%', left: '82%', delay: 0.5 },
-  { Icon: Braces, top: '72%', left: '80%', delay: 1.5 },
+  { Icon: Sparkles, top: '72%', left: '80%', delay: 1.5 },
 ]
 
 export default function Hero() {
@@ -63,11 +63,11 @@ export default function Hero() {
             <Button onClick={() => scrollTo('projects')} icon={ArrowRight}>
               View Projects
             </Button>
-            <Button as="a" href={PROFILE.resumeUrl} download variant="outline" icon={Download}>
+            <Button as="a" href={PROFILE.resumeUrl} download="Mahesh_Savkar_Resume.pdf" variant="outline" icon={Download}>
               Download Resume
             </Button>
             <Button onClick={() => scrollTo('contact')} variant="ghost" icon={Mail}>
-              Hire Me
+              Contact Me
             </Button>
           </div>
         </motion.div>
@@ -81,8 +81,15 @@ export default function Hero() {
         >
           <div className="absolute w-64 h-64 sm:w-80 sm:h-80 rounded-full bg-gradient-to-br from-[var(--color-primary)]/30 to-[var(--color-accent)]/10 blur-2xl" />
 
-          <div className="relative w-56 h-56 sm:w-72 sm:h-72 rounded-full glass border-2 border-[var(--color-primary)]/30 flex items-center justify-center animate-float">
-            <span className="font-display font-bold text-6xl sm:text-7xl gradient-text">KP</span>
+          <div className="relative w-56 h-56 sm:w-72 sm:h-72 rounded-full glass border-2 border-[var(--color-primary)]/40 p-2 sm:p-2.5 flex items-center justify-center animate-float shadow-2xl shadow-[var(--color-primary)]/20">
+            <div className="w-full h-full rounded-full overflow-hidden bg-slate-800">
+              <img
+                src="/images/Mahesh_Savkar.jpg"
+                alt={PROFILE.name}
+                className="w-full h-full object-cover object-center"
+                loading="eager"
+              />
+            </div>
           </div>
 
           {FLOATING_ICONS.map(({ Icon, top, left, delay }, i) => (

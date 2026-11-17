@@ -1,80 +1,62 @@
 export const FEATURED_PROJECT = {
-  title: 'AI Expense Tracker',
+  title: 'AI-Powered Employee Leave Management System',
   description:
-    'A full-stack, AI-assisted personal finance web app that helps users track income and expenses, set monthly budgets, and understand their spending habits through smart insights and interactive charts.',
-  image: '/projects/expense-tracker-hero.svg',
-  tech: ['React', 'Java', 'Spring Boot', 'Hibernate', 'MySQL', 'JWT'],
+    'A full-stack, AI-powered employee leave management system streamlining leave-related administrative workflows with role-aware employee, manager, and administrator access, MySQL persistence, and an intelligent Spring AI/Ollama policy assistant.',
+  tech: ['Java 21', 'Spring Boot', 'Spring AI', 'React.js', 'MySQL', 'RAG', 'Docker'],
   features: [
-    'Expense & income management with category tagging',
-    'Monthly budget planning with over-spend alerts',
-    'Interactive analytics dashboard with charts',
-    'AI-generated spending insights and summaries',
-    'Secure authentication with JWT and role-based access',
+    'Role-aware workflows for employees, managers, and administrators',
+    'Leave requests, balances, approvals, and audit records in MySQL',
+    'AI assistant providing cited policy answers via ChromaDB and Ollama',
+    'Working-day calculation with weekend and holiday awareness',
+    'Docker containerization for application deployment',
   ],
   architecture:
-    'React SPA communicates with a Spring Boot REST API secured by JWT. Hibernate/JPA maps domain entities (User, Expense, Income, Budget) to a MySQL schema. A dedicated insights service aggregates monthly transactions and produces natural-language summaries.',
+    'React client communicates with a Spring Boot REST API secured with JWT. MySQL serves as operational source of truth, while ChromaDB stores policy vectors and Ollama provides local embedding and chat completion.',
   challenges: [
-    'Designing a schema flexible enough for custom categories per user',
-    'Keeping dashboard charts performant with large transaction history',
-    'Securing REST endpoints without adding friction to the UX',
+    'Preventing hallucinations in HR policy Q&A without direct policy citations',
+    'Ensuring strict manager authorization for direct reports only',
+    'Transaction-safe leave balance accounting and idempotent approvals',
   ],
   solutions: [
-    'Normalized category/tag tables with user-scoped foreign keys',
-    'Server-side aggregation endpoints instead of client-side crunching',
-    'Stateless JWT auth with short-lived access + refresh token rotation',
+    'Evidence-constrained Spring AI prompts with ChromaDB vector similarity search',
+    'Role-based access control with JWT and Spring Security authorization',
+    'Database transactions with optimistic locking and ledger audit records',
   ],
   links: {
-    demo: '#',
-    github: 'https://github.com/kalpana23019/AI-Expense-Tracker-',
-    caseStudy: '#',
+    github: 'https://github.com/student-mahesh/ai-powered-employee-leave-management-system',
   },
 }
 
 export const PROJECTS = [
   {
-    id: 'expense-tracker',
-    title: 'AI Expense Tracker',
+    id: 'ai-leave-management',
+    title: 'AI-Powered Employee Leave Management System',
     description:
-      'Full-stack expense & budget manager with AI-driven insights, charts, and secure JWT auth.',
-    image: '/projects/expense-tracker.svg',
-    tech: ['React', 'Spring Boot', 'Hibernate', 'MySQL', 'JWT'],
-    github: 'https://github.com/kalpana23019/AI-Expense-Tracker-',
-    demo: '#',
+      'Full-stack leave management system streamlining leave requests, balances, and administrative workflows, featuring role-aware operations and a RAG-based AI policy assistant.',
+    tech: ['Java 21', 'Spring Boot', 'Spring AI', 'React.js', 'MySQL', 'RAG', 'Docker'],
+    github: 'https://github.com/student-mahesh/ai-powered-employee-leave-management-system',
+    demo: null,
     featured: true,
+    highlights: [
+      'Developed an AI-powered employee leave management system focused on streamlining leave-related administrative workflows.',
+      'Designed the application around employee leave requests, leave information, and management of leave records.',
+      'Worked on incorporating AI capabilities into the leave management process using Spring AI, Ollama, and ChromaDB.',
+    ],
   },
   {
-    id: 'student-management',
-    title: 'Student Management System',
+    id: 'ecommerce-frontend',
+    title: 'E-Commerce Frontend Application',
     description:
-      'Java Servlets + JSP application to manage student records, attendance, and grades with role-based access.',
-    image: '/projects/student-management.svg',
-    tech: ['Java', 'Servlets', 'JSP', 'MySQL', 'Bootstrap'],
-    github: 'https://github.com/kalpana23019/student-management-system',
-    demo: '#',
+      'Responsive frontend e-commerce application featuring dynamic product listings, search, category filtering, cart management, and Redux Toolkit state persistence.',
+    tech: ['React.js', 'Redux Toolkit', 'JavaScript', 'HTML5', 'CSS3', 'REST APIs'],
+    github: 'https://github.com/student-mahesh/ShopVibe-E-commerce-',
+    demo: null,
     featured: false,
-  },
-  {
-    id: 'ecommerce',
-    title: 'K-shop E-Commerce Application',
-    description:
-      'Spring Boot & React storefront with product catalog, cart, order management, and admin panel.',
-    image: '/projects/ecommerce.svg',
-    tech: ['React', 'Spring Boot', 'MySQL', 'REST API'],
-    github: 'https://github.com/kalpana23019/K-Shop-Ecommerce-Application',
-    demo: '#',
-    featured: false,
-  },
-  {
-    id: 'social-media',
-    title: 'Social Media Platform',
-    description:
-      'Real-time posts, comments, and notifications platform — currently in active development.',
-    image: '/projects/social-media.svg',
-    tech: ['React', 'Spring Boot', 'MySQL', 'WebSocket'],
-    github: '#',
-    demo: '#',
-    featured: false,
-    comingSoon: true,
+    highlights: [
+      'Developed a responsive E-Commerce frontend application featuring product listings and interactive product browsing using React.js.',
+      'Integrated DummyJSON REST APIs to fetch and display product data, including product details, images, prices, and categories.',
+      'Implemented Redux Toolkit for centralized state management and created reusable React components for a maintainable application structure.',
+    ],
   },
 ]
 

@@ -1,6 +1,7 @@
 export const NAV_LINKS = [
   { id: 'home', label: 'Home' },
   { id: 'about', label: 'About' },
+  { id: 'skills', label: 'Skills' },
   { id: 'projects', label: 'Projects' },
   { id: 'experience', label: 'Experience' },
   { id: 'certifications', label: 'Certifications' },
@@ -8,25 +9,23 @@ export const NAV_LINKS = [
 ]
 
 export const PROFILE = {
-  name: 'Kalpana Patil',
-  title: 'Java Full Stack Developer',
+  name: 'Mahesh Savkar',
+  initials: 'MS',
+  title: 'Java Full Stack Developer | GenAI',
   taglineRoles: [
-    'Java Developer', 2000,
+    'Java Full Stack Developer', 2000,
+    'GenAI Enthusiast', 2000,
     'Spring Boot Developer', 2000,
-    'React Developer', 2000,
-    'Backend Enthusiast', 2000,
+    'React.js Developer', 2000,
   ],
   intro:
-    'Passionate Java Full Stack Developer specializing in building scalable web applications using Java, Spring Boot, React, Hibernate, MySQL, and REST APIs.',
-  email: 'patilkalpana3657@gmail.com',
-  phone: '+91 80884 95434',
-  location: 'Pune, Maharashtra, India',
-  resumeUrl: '/resume/Kalpana_Patil_Resume.pdf',
+    'Computer Engineering graduate with a CGPA of 8.93 and practical internship experience in Java Full Stack Development and Generative AI. Skilled in Java, Spring Boot, React.js, REST APIs, MySQL, Python, and FastAPI. Experienced in developing AI-integrated applications using Ollama and Docker. Seeking an entry-level software development role to build scalable, reliable, and intelligent applications.',
+  email: 'maheshsavkar93@gmail.com',
+  phone: '+91-7387508637',
+  location: 'Pune City, Maharashtra, India',
+  resumeUrl: '/resume/Mahesh_Savkar_Resume.pdf',
   social: {
-    github: 'https://github.com/kalpana23019',
-    linkedin: 'https://www.linkedin.com/in/kalpana-patil-ak2790/',
-    leetcode: 'https://leetcode.com/u/eJ87SfvC5D/',
-    gfg: 'https://geeksforgeeks.org/user/kalpanapatil',
-    hackerrank: 'https://hackerrank.com/kalpanapatil',
+    github: 'https://github.com/student-mahesh',
+    linkedin: 'https://www.linkedin.com/in/mahesh-savkar-300377294/',
   },
 }

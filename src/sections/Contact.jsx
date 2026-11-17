@@ -45,7 +45,15 @@ export default function Contact() {
       toast.success("Message sent — I'll get back to you soon!")
       setForm(initialForm)
     } catch (err) {
-      toast.error('Something went wrong. Please try again or email me directly.')
+      if (err.message === 'EMAILJS_NOT_CONFIGURED') {
+        const mailtoUrl = `mailto:${PROFILE.email}?subject=${encodeURIComponent(form.subject)}&body=${encodeURIComponent(
+          `Hi Mahesh,\n\n${form.message}\n\nFrom: ${form.name} (${form.email})`
+        )}`
+        window.location.href = mailtoUrl
+        toast.info('Contact form requires EmailJS setup in .env. Opening default email client...')
+      } else {
+        toast.error('Something went wrong. Please try again or email me directly.')
+      }
     } finally {
       setLoading(false)
     }
@@ -60,8 +68,8 @@ export default function Contact() {
     <section id="contact" className="section-shell py-24 scroll-mt-16">
       <SectionHeading
         eyebrow="contact"
-        title="Let's build something together"
-        description="Have a role, project, or just want to talk backend architecture? My inbox is open."
+        title="Get in Touch"
+        description="Have a role, project, or want to discuss full-stack &amp; GenAI development? My inbox is always open."
       />
 
       <div className="grid lg:grid-cols-[1fr_1.2fr] gap-10 mt-12">
@@ -74,10 +82,10 @@ export default function Contact() {
         >
           {[
             { icon: Mail, label: 'Email', value: PROFILE.email, href: `mailto:${PROFILE.email}` },
-            { icon: Phone, label: 'Phone', value: PROFILE.phone, href: `tel:${PROFILE.phone.replace(/\s/g, '')}` },
+            { icon: Phone, label: 'Phone', value: PROFILE.phone, href: `tel:${PROFILE.phone.replace(/[^+\d]/g, '')}` },
             { icon: MapPin, label: 'Location', value: PROFILE.location, href: null },
-            { icon: Github, label: 'GitHub', value: 'kalpanapatil', href: PROFILE.social.github },
-            { icon: Linkedin, label: 'LinkedIn', value: 'Kalpana Patil', href: PROFILE.social.linkedin },
+            { icon: Github, label: 'GitHub', value: 'student-mahesh', href: PROFILE.social.github },
+            { icon: Linkedin, label: 'LinkedIn', value: 'Mahesh Savkar', href: PROFILE.social.linkedin },
           ].map(({ icon: Icon, label, value, href }) => {
             const content = (
               <GlassCard className="p-4 flex items-center gap-4" hover={false}>
@@ -150,7 +158,7 @@ export default function Contact() {
                 name="subject"
                 value={form.subject}
                 onChange={handleChange}
-                placeholder="What's this about?"
+                placeholder="What's this regarding?"
                 className={fieldClass(errors.subject)}
               />
               {errors.subject && <p className="text-xs text-red-400 mt-1">{errors.subject}</p>}
@@ -166,16 +174,22 @@ export default function Contact() {
                 rows={5}
                 value={form.message}
                 onChange={handleChange}
-                placeholder="Tell me a bit about the opportunity or project..."
+                placeholder="Write your message here..."
                 className={fieldClass(errors.message)}
               />
               {errors.message && <p className="text-xs text-red-400 mt-1">{errors.message}</p>}
             </div>
 
-            <div className="mt-6">
+            <div className="mt-6 flex flex-wrap items-center justify-between gap-4">
               <Button type="submit" disabled={loading} icon={loading ? Loader2 : Send} className={loading ? 'opacity-80' : ''}>
                 {loading ? 'Sending...' : 'Send Message'}
               </Button>
+              <a
+                href={`mailto:${PROFILE.email}`}
+                className="text-xs font-mono-alt text-[var(--color-primary)] hover:underline"
+              >
+                Or email directly &rarr;
+              </a>
             </div>
           </GlassCard>
         </motion.form>

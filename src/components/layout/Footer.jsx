@@ -1,4 +1,4 @@
-import { Github, Linkedin, Code2 } from 'lucide-react'
+import { Github, Linkedin, Mail } from 'lucide-react'
 import { NAV_LINKS, PROFILE } from '../../data/nav'
 
 export default function Footer() {
@@ -11,10 +11,10 @@ export default function Footer() {
       <div className="section-shell py-12 grid gap-10 md:grid-cols-3">
         <div>
           <button onClick={() => scrollTo('home')} className="font-display font-bold text-xl gradient-text">
-            &lt;KP /&gt;
+            &lt;MS /&gt;
           </button>
           <p className="text-[var(--color-text-dim)] text-sm mt-3 max-w-xs">
-            {PROFILE.title} building scalable, thoughtful full-stack applications.
+            {PROFILE.title} building scalable, intelligent full-stack applications.
           </p>
         </div>
 
@@ -42,9 +42,9 @@ export default function Footer() {
               className="w-10 h-10 rounded-full glass flex items-center justify-center hover:text-[var(--color-primary)] transition-colors">
               <Linkedin size={18} />
             </a>
-            <a href={PROFILE.social.leetcode} target="_blank" rel="noreferrer" aria-label="LeetCode"
+            <a href={`mailto:${PROFILE.email}`} aria-label="Email"
               className="w-10 h-10 rounded-full glass flex items-center justify-center hover:text-[var(--color-primary)] transition-colors">
-              <Code2 size={18} />
+              <Mail size={18} />
             </a>
           </div>
         </div>

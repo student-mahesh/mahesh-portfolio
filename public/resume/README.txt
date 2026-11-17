@@ -1,2 +1,2 @@
-Place your resume PDF here as: Kalpana_Patil_Resume.pdf
-(path referenced in src/data/nav.js -> PROFILE.resumeUrl)
+Place your resume PDF here as: Mahesh_Savkar_Resume.pdf
+Update PROFILE.resumeUrl in src/data/nav.js if renamed.
